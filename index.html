@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manoogle</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/img/iconmonstr-chrome-1-32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <a href="https://www.google.cz/imghp?hl=cs&tab=ri&authuser=0&ogbl">
+          <p>Obrázky</p></a
+        >
+      </div>
+      <div class="div-title">
+        <h1 id="title">
+          <span>M</span><span>a</span><span>n</span><span>o</span><span>o</span
+          ><span>g</span><span>l</span><span>e</span>
+        </h1>
+      </div>
+      <section>
+        <div class="search-bar">
+          <form action="https://www.google.cz/search" method="GET">
+            <input
+              type="text"
+              name="q"
+              autocomplete="off"
+              placeholder="tady se píše :)"
+            />
+          </form>
+          <img
+            class="search"
+            src="/img/iconmonstr-magnifier-1-32.png"
+            alt="Magnifier"
+          />
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="links" class="mySlides">
+        <div class="yt">
+          <a href="https://www.youtube.com/">
+            <img src="/img/iconmonstr-youtube-6-32.png" alt="Youtube" />
+            <p>Youtube</p>
+          </a>
+        </div>
+        <div class="fb">
+          <a href="https://www.facebook.com/#_=_">
+            <img src="/img/iconmonstr-facebook-4-32.png" alt="Facebook" />
+            <p>Facebook</p>
+          </a>
+        </div>
+        <div class="r">
+          <a href="https://www.reddit.com/">
+            <img src="/img/iconmonstr-reddit-4-32.png" alt="Reddit" />
+            <p>Reddit</p>
+          </a>
+        </div>
+        <div class="g">
+          <a href="https://www.google.cz/">
+            <img src="/img/iconmonstr-chrome-1-32.png" alt="Google" />
+            <p>Google</p>
+          </a>
+        </div>
+        <div class="gm">
+          <a href="https://mail.google.com/mail/u/0/#inbox">
+            <img src="/img/iconmonstr-gmail-1-32.png" alt="Gmail" />
+            <p>Gmail</p>
+          </a>
+        </div>
+        <div class="ig">
+          <a href="https://www.instagram.com/">
+            <img src="/img/iconmonstr-instagram-11-32.png" alt="Instagram" />
+            <p>Instagram</p>
+          </a>
+        </div>
+      </section>
+      <section id="links2" class="mySlides">
+        <div class="zs">
+          <a href="https://www.zsrozmital.cz/">
+            <img src="/img/iconmonstr-school-19-32.png" alt="Škola" />
+            <p>ZŠ</p>
+          </a>
+        </div>
+        <div class="d">
+          <a
+            href="https://onedrive.live.com/?id=D7F68F3E26956516%21105&cid=D7F68F3E26956516"
+          >
+            <img src="/img/iconmonstr-time-17-32.png" alt="Hodiny" />
+            <p>D/Čj</p>
+          </a>
+        </div>
+        <div class="pp">
+          <a href="https://zsrozmital.webnode.cz/">
+            <img src="/img/iconmonstr-leaf-1-32.png" alt="List" />
+            <p>Pp/Ch</p>
+          </a>
+        </div>
+        <div class="of">
+          <a href="https://www.office.com/?auth=2">
+            <img src="/img/iconmonstr-paperclip-2-32.png" alt="Sponka" />
+            <p>Office</p>
+          </a>
+        </div>
+        <div class="wiki">
+          <a href="https://cs.wikipedia.org/wiki/Hlavn%C3%AD_strana">
+            <img src="/img/iconmonstr-globe-3-32.png" alt="Glóbus" />
+            <p>Wiki</p>
+          </a>
+        </div>
+        <div class="bc">
+          <a href="https://zsrozmital.bakalari.cz:44390/dashboard">
+            <img src="/img/iconmonstr-school-21-32.png" alt="Čepice" />
+            <p>Bakaláři</p>
+          </a>
+        </div>
+      </section>
+    </main>
+    <div>
+      <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="next" onclick="plusDivs(1)">&#10095;</a>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
